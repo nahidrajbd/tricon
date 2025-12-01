@@ -372,38 +372,13 @@ img {
     transition: var(--transition);
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-}
-
-.project-img {
-    position: relative;
-    height: 250px;
-    overflow: hidden;
-}
-
-.project-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-card:hover .project-img img {
-    transform: scale(1.1);
-}
-
-.project-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
+right: 15px;
+background: var(--primary-color);
+color: var(--white);
+padding: 5px 12px;
+border-radius: 20px;
+font-size: 0.8rem;
+font-weight: 600;
 }
 
 .project-badge.new {
@@ -696,5 +671,195 @@ img {
     .stats {
         flex-direction: column;
         gap: 20px;
+    }
+}
+
+/* Property Pages */
+.property-hero {
+    margin-top: 70px;
+    position: relative;
+}
+
+.property-hero-image {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.property-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-hero .property-badge {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.property-hero .property-badge.new {
+    background: #10B981;
+}
+
+.property-details {
+    padding: 60px 0;
+}
+
+.property-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.property-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.property-header .location {
+    font-size: 1.1rem;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.property-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.property-main h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.property-main h3 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.property-main p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.feature-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.feature-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    color: var(--text-color);
+}
+
+.feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.property-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.info-card {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.info-value {
+    color: var(--gray);
+}
+
+.related-projects {
+    list-style: none;
+}
+
+.related-projects li {
+    margin-bottom: 12px;
+}
+
+.related-projects a {
+    color: var(--text-color);
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.related-projects a:hover {
+    background: var(--light-bg);
+    color: var(--primary-color);
+    padding-left: 15px;
+}
+
+@media (max-width: 992px) {
+    .property-content {
+        grid-template-columns: 1fr;
+    }
+
+    .property-sidebar {
+        position: static;
+    }
+
+    .property-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .property-header h1 {
+        font-size: 2rem;
+    }
+
+    .property-hero-image {
+        height: 300px;
     }
 }
